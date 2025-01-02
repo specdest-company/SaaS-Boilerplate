@@ -14,7 +14,11 @@ import { AllLocales } from '@/utils/AppConfig';
 // 3. Every 24 hours at 5am, the workflow will run automatically
 
 // Using internationalization in Server Components
-export default getRequestConfig(async ({ locale }) => {
+export default getRequestConfig(async ({ requestLocale }) => {
+  let locale = await requestLocale;
+  if (!locale) {
+    locale = 'ja';
+  }
   // Validate that the incoming `locale` parameter is valid
   if (!AllLocales.includes(locale)) {
     notFound();
@@ -22,5 +26,6 @@ export default getRequestConfig(async ({ locale }) => {
 
   return {
     messages: (await import(`../locales/${locale}.json`)).default,
+    locale,
   };
 });

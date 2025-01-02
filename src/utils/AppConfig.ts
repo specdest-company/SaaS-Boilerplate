@@ -2,9 +2,9 @@ import type { LocalePrefix } from 'node_modules/next-intl/dist/types/src/routing
 
 import { BILLING_INTERVAL, type PricingPlan } from '@/types/Subscription';
 
+// @ts-expect-error somehow this gives error
 const localePrefix: LocalePrefix = 'as-needed';
 
-// FIXME: Update this configuration file based on your project information
 export const AppConfig = {
   name: 'SaaS Template',
   locales: [
@@ -12,9 +12,9 @@ export const AppConfig = {
       id: 'en',
       name: 'English',
     },
-    { id: 'fr', name: 'Français' },
+    { id: 'ja', name: '日本語' },
   ],
-  defaultLocale: 'en',
+  defaultLocale: 'ja',
   localePrefix,
 };
 

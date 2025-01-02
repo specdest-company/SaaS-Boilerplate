@@ -8,7 +8,7 @@ test.describe('I18n', () => {
       await expect(page.getByText('The perfect SaaS template to build')).toBeVisible();
 
       await page.getByRole('button', { name: 'lang-switcher' }).click();
-      await page.getByText('Français').click();
+      await page.getByText('日本語').click();
 
       await expect(page.getByText('Le parfait SaaS template pour construire')).toBeVisible();
     });
@@ -18,7 +18,7 @@ test.describe('I18n', () => {
 
       await expect(page.getByText('Email address')).toBeVisible();
 
-      await page.goto('/fr/sign-in');
+      await page.goto('/ja/sign-in');
 
       await expect(page.getByText('Adresse e-mail')).toBeVisible();
     });

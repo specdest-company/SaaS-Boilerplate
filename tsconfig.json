@@ -56,8 +56,12 @@
   "exclude": [
     "./out/**/*",
     "./node_modules/**/*",
+    "./src/components/ui/**/*",
+    "src/hooks/**/*",
     "**/*.spec.ts",
-    "**/*.e2e.ts"
+    "**/*.e2e.ts",
+    "src/components/ui",
+    "src/components/ui/**/*"
   ],
   "include": [
     "next-env.d.ts",

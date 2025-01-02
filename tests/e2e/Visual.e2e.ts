@@ -12,7 +12,7 @@ test.describe('Visual testing', () => {
     });
 
     test('should take screenshot of the French homepage', async ({ page }) => {
-      await page.goto('/fr');
+      await page.goto('/ja');
 
       await expect(page.getByText('Le parfait SaaS template pour construire')).toBeVisible();
 
